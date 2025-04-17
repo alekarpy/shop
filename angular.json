@@ -17,19 +17,34 @@
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+               "node_modules/zone.js/bundles/zone.umd.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+
               {
                 "glob": "**/*",
                 "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+             },
+             {
+              "glob": "**/*",
+               "input": "src/fonts",
+              "output": "fonts"
+               }
+              ],
+
+              "styles": [
+              "src/styles.css",  //Primero el CSS de Angular
+                "node_modules/flowbite/dist/flowbite.min.css" // Luego Flowbite
+
+              ],
+              "scripts": [
+                "node_modules/flowbite/dist/flowbite.min.js"
+                          ],
+                "allowedCommonJsDependencies": [
+                   "@popperjs/core",
+                   "flowbite"
+                      ]
           },
           "configurations": {
             "production": {
@@ -95,5 +110,7 @@
         }
       }
     }
+
   }
+
 }
