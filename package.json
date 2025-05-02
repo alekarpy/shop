@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng deploy --base-href=/<nombre-de-tu-repositorio>/",
+    "deploy": "ng deploy --base-href=/2025-2-ecommerce/",
     "tailwind:build": "tailwindcss -i src/styles.css -o ./src/tailwind-output.css",
     "tailwind:watch": "tailwindcss -i src/styles.css -o ./src/tailwind-output.css --watch"
   },
