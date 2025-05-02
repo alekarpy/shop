@@ -13,15 +13,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ecommerce",
+            "outputPath": "dist/2025-1-ecommerce",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            
             "polyfills": [
                "node_modules/zone.js/bundles/zone.umd.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-
+          
+          
               {
                 "glob": "**/*",
                 "input": "public"
@@ -30,12 +32,31 @@
               "glob": "**/*",
                "input": "src/fonts",
               "output": "fonts"
-               }
+               },
+               {
+                "glob": ".nojekyll",
+                "input": "src",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
+              },
+
+              {
+                "glob": "**/*",
+                "input": "src/img",
+                "output": "/img"
+              }
+
+
+
               ],
 
               "styles": [
-              "src/styles.css",  //Primero el CSS de Angular
-                "node_modules/flowbite/dist/flowbite.min.css" // Luego Flowbite
+              "src/styles.css",  
+                "node_modules/flowbite/dist/flowbite.min.css" 
 
               ],
               "scripts": [
@@ -104,11 +125,11 @@
             ],
             "scripts": []
           }
-        },
+          },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+         "builder": "angular-cli-ghpages:deploy"
         }
-      }
+      } 
     }
 
   }
