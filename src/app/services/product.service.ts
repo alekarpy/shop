@@ -19,7 +19,7 @@ export class ProductService {
         nivel: 'Avanzado',
         calificacion: 4.8,
         categoria: 'Desarrollo Web',
-        imagen: 'img/img6.webp',
+        imagen: '/shop/src/img/img6.webp',
         cantidad: 0,
       },
       {
