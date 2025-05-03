@@ -11,7 +11,7 @@ export class ProductService {
     this.datos = [
       {
         id: 1, // Nuevo campo único
-        nombre: 'Javascript Avanzado: Domínalo Como Un Master',
+        nombre: 'Javascript ',
         descripcion:
           'Domina los conceptos avanzados de Javascript de la mano de un experto a través de ejercicios prácticos',
         precio: 1899,
@@ -32,7 +32,7 @@ export class ProductService {
         nivel: 'Básico',
         calificacion: 5,
         categoria: 'Desarrollo Web',
-        imagen: 'img/img2.webp',
+        imagen: '/img/img2.webp',
         cantidad: 0,
       },
 
