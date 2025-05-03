@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ecommerce": {
+    "shop": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,16 +13,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/2025-1-ecommerce",
+            "outputPath": "dist/shop",
             "index": "src/index.html",
             "browser": "src/main.ts",
-
             "polyfills": [
                "node_modules/zone.js/bundles/zone.umd.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-
 
               {
                 "glob": "**/*",
@@ -32,26 +30,7 @@
               "glob": "**/*",
                "input": "src/fonts",
               "output": "fonts"
-               },
-               {
-                "glob": ".nojekyll",
-                "input": "src",
-                "output": "/"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/assets",
-                "output": "/assets"
-              },
-
-              {
-                "glob": "**/*",
-                "input": "src/img",
-                "output": "/img"
-              }
-
-
-
+               }
               ],
 
               "styles": [
@@ -72,8 +51,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "10MB",
-                  "maximumError": "10MB"
+                  "maximumWarning": "1MB",
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -95,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ecommerce:build:production"
+              "buildTarget": "shop:build:production"
             },
             "development": {
-              "buildTarget": "ecommerce:build:development"
+              "buildTarget": "shop:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -125,9 +104,9 @@
             ],
             "scripts": []
           }
-          },
+        },
         "deploy": {
-         "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
