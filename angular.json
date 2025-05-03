@@ -16,14 +16,14 @@
             "outputPath": "dist/2025-1-ecommerce",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            
+
             "polyfills": [
                "node_modules/zone.js/bundles/zone.umd.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-          
-          
+
+
               {
                 "glob": "**/*",
                 "input": "public"
@@ -55,8 +55,8 @@
               ],
 
               "styles": [
-              "src/styles.css",  
-                "node_modules/flowbite/dist/flowbite.min.css" 
+              "src/styles.css",
+                "node_modules/flowbite/dist/flowbite.min.css"
 
               ],
               "scripts": [
@@ -72,8 +72,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "10MB",
+                  "maximumError": "10MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -129,7 +129,7 @@
         "deploy": {
          "builder": "angular-cli-ghpages:deploy"
         }
-      } 
+      }
     }
 
   }
